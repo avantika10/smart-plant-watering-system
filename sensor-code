@@ -94,3 +94,17 @@ void onArtificialLightChange() {
   }
   updateScreen();
 }
+
+//Update displayed Info
+void updateScreen() {
+  carrier.display.fillScreen(ST77XX_BLACK);
+  carrier.display.setTextColor(ST77XX_WHITE);
+  carrier.display.setTextSize(3);
+ 
+  carrier.display.setCursor(40, 50);
+  carrier.display.print(waterPumpState);
+  carrier.display.setCursor(40, 90);
+  carrier.display.print(coolingFanState);
+  carrier.display.setCursor(40, 130);
+  carrier.display.print(lightState);
+}
